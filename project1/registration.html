@@ -1,0 +1,77 @@
+<html>
+<head>
+ <title>Registration Form</title>
+</head>
+<body>
+ <form method="post" action="saveRegistration.php" name="regForm">
+
+ <h2 align="center">NURHOMESTAY REGISTRATION</h2>
+ <h3 align="center">Information Form</h3><br>
+ <table align="center" border="1">
+ <tr>
+ <th colspan="2">Cust</th>
+ </tr>
+ 
+ <tr>
+    <th width="104">Booking ID</td>
+    <td width="350"><input type="text" name="adBookingID" size="30"></td>
+</tr>
+
+ <tr>
+    <th width="104">Name</td>
+    <td width="350"><input type="text" name="adName" size="30"></td>
+ </tr>
+
+ <tr>
+    <th width="104">Contact</td>
+    <td width="350"><input type="text" name="adContact" size="30"></td>
+ </tr>
+
+ <tr>
+     <th width="104">Email</td>
+    <td width="350"><input type="text" name="adEmail" size="30"></td>
+ </tr>
+
+ <tr>
+    <th width="104">Arrivals</td>
+    <td width="350"><input type="date" name="adArrivals" size="30"></td>
+</tr>
+
+<tr>
+    <th width="104">Leaving</td>
+    <td width="350"><input type="date" name="adLeaving" size="30"></td>
+</tr>
+
+ <tr>
+    <th width="104">Place Name</td>
+    <td width="350"><select name="PlaceName">
+    <option value="Port Dickson">Port Dickson</option>
+    <option value="Kota Tinggi">Kota Tinggi</option>
+ </select>
+ </td>
+ </tr>
+
+ <tr>
+    <th width="104">Packages</td>
+    <td width="350"><select name="Packages">
+    <option value="Full House">Full House</option>
+    <option value="Twin Room">Twin Room</option>
+    <option value="Single Room A">Single Room A</option>
+    <option value="Single Room B">Single Room B</option>
+    </select>
+    </td>
+    </tr>
+
+ <tr>
+ <td>&nbsp&nbsp</td>
+ <td>&nbsp&nbsp</td>
+ </tr>
+ 
+ <tr>
+ <td width="104"><input type="submit" name="submitBtn" value="Submit"></td>
+ <td width="350"><input type="reset" name="resetBtn" value="Clear"></td>
+ </tr>
+ </table>
+ </form>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #800000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #EADDCA;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+      background-color: #800000;
+      color: #fff;
+      padding: 5px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+
+        }
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Container for each slide */
+.mySlides {
+  display: none;
+  position: relative;
+  text-align: center;
+}
+
+/* Styling for the images */
+.mySlides img {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-top-left-radius: 10px; /* Rounded corners for the top-left */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* On hover, darken the buttons */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1><strong><em>THE AhHTAS PALACE</em></strong></h1>
+    </header>
+ 
+    <nav> 
+  <a href="aboutus.html" class="active" style="color:#800000;">About</a>
+  <a href="reservation.php" class="active" style="color:#800000;">Reservation</a>
+  <a href="menu.html" class="active" style="color:#800000;">Menu</a>
+  <a href="feedback.php" class="active" style="color:#800000;">Contact</a>
+  <a href="location.html" class="active" style="color:#800000;">Find Us</a>
+</nav>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 3</div>
+    <img src="img1.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <img src="img2.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpeg" style="width:100%">
+  </div>
+    
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    <footer>
+        <p>&copy; 2024 The Ahhtas Palace</p>
+    </footer>
+    <footer>
+        <p>&copy; 2024 The Ahhtas Palace</p>
+    </footer>
+
+    <!-- JavaScript for button functionality -->
+    <script>
+        function login() {
+            // Add login functionality here
+            alert("Login functionality will be implemented here.");
+        }
+
+    </script>
+</body>
+</html>
